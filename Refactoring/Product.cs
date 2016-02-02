@@ -16,5 +16,10 @@ namespace Refactoring
         public double Price;
         [JsonProperty("Quantity")]
         public int Qty;
+
+        public string Description(int index)
+        {
+            return (index+1) + ": " + this.Name + " (" + this.Price.ToString("C") + ")";
+        }
     }
 }
